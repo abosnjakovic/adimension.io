@@ -127,7 +127,7 @@
         uniforms: this.uniforms,
         side: THREE.DoubleSide,
         shading: THREE.FlatShading,
-        // wireframe: true
+       //  wireframe: true
       });
 
       var mesh = new THREE.Mesh(g, m);

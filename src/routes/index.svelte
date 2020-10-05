@@ -37,14 +37,14 @@
   <div class="sm:flex-none sm:pb-2 sm:text-center md:flex-1 md:text-left">
     <h1 class="mb-0">Hello, welcome to my dimension .</h1>
     <p>
-      I'm Adam Bosnjakovic <a
-                             href="https://www.github.com/Charca/sapper-blog-template"
-                             target="_blank">GitHub</a> to get started.
+      I'm Adam Bosnjakovic, a software engineer from the ♥-ly city of Sydney working for <a
+                                                                                             href="https://experience.digital"
+                                                                                             target="_blank">Experience Digital</a>.
     </p>
   </div>
 
   <figure class="text-xs text-center">
-    <img alt="Person typing on laptop" src="undraw_counting_stars_rrnl.svg" />
+    <img alt="Person typing on laptop" src="images/undraw_counting_stars_rrnl.svg" />
     <figcaption class="italic">
       Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a>
     </figcaption>

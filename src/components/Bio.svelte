@@ -19,7 +19,7 @@
 </style>
 
 <div>
-  <img src="profile-pic.png" alt="Maxi Ferreira">
+  <img src="images/profile-pic.png" alt="Maxi Ferreira">
   <p>
     Hi, I'm <strong>Maxi</strong>. I'm a software engineer and data scientist from Córdoba, Argentina.
     You can follow me on <a href="https://www.twitter.com/Charca" target="_blank">Twitter</a>,
