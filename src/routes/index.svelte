@@ -37,9 +37,9 @@
   <div class="sm:flex-none sm:pb-2 sm:text-center md:flex-1 md:text-left">
     <h1 class="mb-0">Hello, welcome to my dimension .</h1>
     <p>
-      I'm Adam Bosnjakovic, a software engineer from the ♥-ly city of Sydney working for <a
-                                                                                             href="https://experience.digital"
-                                                                                             target="_blank">Experience Digital</a>.
+      I'm Adam Bosnjakovic, a software engineer from the <span style="color: #fd6378;">♥</span>ly city of Sydney working for <a
+                                                               href="https://experience.digital"
+                                                               target="_blank">Experience Digital</a>.
     </p>
   </div>
 
