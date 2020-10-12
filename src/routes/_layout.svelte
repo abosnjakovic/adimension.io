@@ -28,7 +28,7 @@
 
   footer {
     color: #aaa;
-    font-size: 1em;
+    font-size: 0.75em;
     font-family: Rubik, sans-serif;
     margin: 1em auto;
     max-width: 1400px;
@@ -48,11 +48,7 @@
 
   <footer>
     <span>
-      &copy; {new Date().getFullYear()} adimension. Powered by <a
-                                                                 href="https://sapper.svelte.dev"
-                                                                 target="_blank">Sapper</a>. Template by <a
-                                                                 href="https://www.twitter.com/Charca"
-                                                                 target="_blank">Adam Bosnjakovic</a>.
+      &copy; {new Date().getFullYear()} Adam Bosnjakovic made with Svelte, Sapper and 🌈's
     </span>
   </footer>
 </div>

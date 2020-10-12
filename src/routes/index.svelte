@@ -39,7 +39,7 @@
     <p>
       I'm Adam Bosnjakovic, a software engineer from the <span style="color: #fd6378;">♥</span>ly city of Sydney working for <a
                                                                href="https://experience.digital"
-                                                               target="_blank">Experience Digital</a>.
+                                                               target="_blank">Experience Digital</a>, a rocket powered digital agency.
     </p>
   </div>
 
@@ -48,5 +48,10 @@
     <figcaption class="italic">
       Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a>
     </figcaption>
+
   </figure>
+
+</div>
+<div class="flex flex-1 sm:flex-col md:flex-row lg:flex-row items-center justify-center">
+  who I have worked with here
 </div>
