@@ -41,7 +41,12 @@ This is where your markdown posts live in. All `.md` files in this directory are
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Charca/sapper-blog-template)
 
-
 ## 🐛 Bugs and feedback
 
 Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
+
+## 📓 To Do
+
+- [] make the trianglify colors change / animate. could be when route changes
+- [] any ways to use filters / blue effets on the svg?
+- [] what can animejs do here?

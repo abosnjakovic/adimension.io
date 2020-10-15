@@ -1,6 +1,7 @@
 <script>
   import Header from "../components/Header.svelte";
-  import Twisted from "../components/twisted/Twisted.svelte"
+  import Trianglify from "../components/trianglify/trianglify.svelte"
+  /* import Twisted from "../components/twisted/Twisted.svelte" */
 
   export let segment;
 </script>
@@ -39,7 +40,7 @@
 </style>
 
 <div class="layout">
-  <Twisted />
+  <Trianglify />
   <Header {segment} />
 
   <main>

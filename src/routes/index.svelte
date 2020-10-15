@@ -53,5 +53,5 @@
 
 </div>
 <div class="flex flex-1 sm:flex-col md:flex-row lg:flex-row items-center justify-center">
-  who I have worked with here
+  nsw  gov, wwf, aws partner network, undp
 </div>

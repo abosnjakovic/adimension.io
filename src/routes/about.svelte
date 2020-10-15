@@ -1,4 +1,4 @@
-<style>
+<style type="text/scss">
   figure {
     float: right;
     margin: -3em -7em 2em 2em;
@@ -24,7 +24,7 @@
 <div class="container">
   <h1>About</h1>
   <figure>
-    <img src='images/rsz_florian-klauer-489-unsplash.jpg' alt='Image of a vintage typewriter.'>
+    <img src='images/rsz_florian-klauer-489-unsplash.jpg' alt='vintage typewriter.'>
     <figcaption>Photo by <a href="https://unsplash.com/@florianklauer" target="_blank">Florian Klauer</a> on Unsplash</figcaption>
   </figure>
   <p>Text placeholder via <a href="https://jeffsum.com/" target="_blank">Jeffsum</a>.</p>
