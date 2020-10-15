@@ -2,44 +2,58 @@
    import {onMount} from "svelte"
    import trianglify from 'trianglify/dist/trianglify.bundle.js'
 
+   import { goto, stores } from '@sapper/app';
+   const { page } = stores();
+
+
    onMount(()=>{
-      let defaultOptions = {
-         width: window.innerWidth,
-         height: window.innerHeight,
-         cellSize: 55,
-         variance: 0.75,
-         seed: 'YlGnBu',
-         xColors: 'random',
-         yColors: 'match',
-         fill: true,
-         /* palette: trianglify.colorbrewer, */
-         colorSpace: 'lab',
-         colorFunction: trianglify.colorFunctions.interpolateLinear(0.5),
-         strokeWidth: 5,
-         points: null
-      }
 
-      const svgOpts = {
-         includeNamespace: true,
-         coordinateDecimals: 1
-      }
+      if (typeof window !== "undefined" && typeof document !== "undefined") {
+         page.subscribe(({ path, params, query }) => {
 
-      const pattern = trianglify(defaultOptions)
-      document.getElementById('trianglify').appendChild(pattern.toSVG(svgOpts))
-      window.onresize = () => {
-         defaultOptions.width = window.innerWidth
-         defaultOptions.height = window.innerHeight
-         const pattern = trianglify(defaultOptions)
-         let t = document.getElementById('trianglify')
-         t.removeChild(t.childNodes[0]);
-         document.getElementById('trianglify').appendChild(pattern.toSVG(svgOpts))
+            let defaultOptions = {
+               width: window.innerWidth,
+               height: document.body.clientHeight,
+               cellSize: 55,
+               variance: 0.75,
+               seed: 'YlGnBu',
+               xColors: 'random',
+               yColors: 'match',
+               fill: true,
+               /* palette: trianglify.colorbrewer, */
+               colorSpace: 'lab',
+               colorFunction: trianglify.colorFunctions.interpolateLinear(0.5),
+               strokeWidth: 5,
+               points: null
+            }
+
+            const svgOpts = {
+               includeNamespace: true,
+               coordinateDecimals: 1
+            }
+
+            const pattern = trianglify(defaultOptions)
+            let t = document.getElementById('trianglify')
+            if(t.childNodes.length > 0){
+               t.removeChild(t.childNodes[0]);
+            }
+            document.getElementById('trianglify').appendChild(pattern.toSVG(svgOpts))
+            window.onresize = () => {
+               defaultOptions.width = window.innerWidth
+               defaultOptions.height = document.body.clientHeight
+               const pattern = trianglify(defaultOptions)
+               let t = document.getElementById('trianglify')
+               t.removeChild(t.childNodes[0]);
+               document.getElementById('trianglify').appendChild(pattern.toSVG(svgOpts))
+            }
+         })
       }
    })
 </script>
 
 <style type="text/scss">
    .trianglify {
-      height: 100%;
+      min-height: 100%;
       background: linear-gradient(white, #4e4e4e, white);
       background-size: .1rem 400%;
       animation: bg 8s infinite;
