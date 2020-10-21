@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "adimension",
+  "description": "adam bosnjakovic personal portfolio blog",
   "version": "0.0.1",
   "scripts": {
     "dev": "run-p start:dev watch:css",
@@ -56,6 +56,7 @@
     "rollup-plugin-svelte": "^5.0.1",
     "rollup-plugin-terser": "^4.0.4",
     "sapper": "^0.27.13",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-image": "^0.2.7"
   }
 }

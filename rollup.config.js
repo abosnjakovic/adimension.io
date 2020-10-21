@@ -10,6 +10,7 @@ import markdown from "./src/utils/markdown.js";
 import pkg from "./package.json";
 import sveltePreprocess from "svelte-preprocess";
 import json from "@rollup/plugin-json";
+import image from "svelte-image";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -27,6 +28,7 @@ const preprocess = sveltePreprocess({
   postcss: {
     plugins: [require("postcss-import")(), require("postcss-nested")()],
   },
+  ...image(),
 });
 
 export default {

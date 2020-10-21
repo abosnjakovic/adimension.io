@@ -45,7 +45,7 @@
     <slot />
   </main>
 
-  <footer>
+  <footer class="z-10">
     <span>
       &copy; {new Date().getFullYear()} Adam Bosnjakovic made with Svelte, Sapper and 🌈's
     </span>

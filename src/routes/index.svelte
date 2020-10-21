@@ -1,4 +1,5 @@
 <script>
+ import {onMount} from "svelte"
 </script>
 
 <style>
@@ -12,7 +13,7 @@
   }
 
   img {
-    width: 100%;
+    /* width: 100%; */
     max-width: 400px;
   }
 
@@ -46,12 +47,18 @@
   <figure class="text-xs text-center">
     <img alt="Person typing on laptop" src="images/undraw_counting_stars_rrnl.svg" />
     <figcaption class="italic">
-      Illustration thanks to <a href="https://undraw.co" target="_blank">Undraw</a>
+      Illustration <a href="https://undraw.co" target="_blank">Undraw</a>
     </figcaption>
 
   </figure>
 
 </div>
-<div class="flex flex-1 sm:flex-col md:flex-row lg:flex-row items-center justify-center">
-  nsw  gov, wwf, aws partner network, undp
+
+<p><a href="#" class="italic">works</a></p>
+<div class="flex flex-1 sm:flex-col md:flex-row lg:flex-row">
+  <img class="h-16 pr-4" src="images/wwf-logo.svg" alt="WWF Australia logo">
+  <img class="h-16 pr-4" src="images/webby-logo.svg" alt="Webby Awards logo">
+  <img class="h-16 pr-4" src="images/nsw-logo.png" alt="NSW Government logo">
+  <img class="h-16 pr-4" src="images/undp-logo.svg" alt="UNDP logo">
+  <img class="h-10" src="images/aws-logo.svg" alt="AWS Partner Services Logo">
 </div>
