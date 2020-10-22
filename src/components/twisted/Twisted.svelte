@@ -8,9 +8,9 @@
 
     window.onload = () => {
       var webgl = new Webgl();
-      window.onresize = () => {
-        webgl.resize();
-      };
+      /* window.onresize = () => { */
+      /*   webgl.resize(); */
+      /* }; */
     };
   })
 
@@ -33,7 +33,7 @@
         this.props.near,
         this.props.far
       );
-      this.camera.position.set(75, 10, -10);
+      this.camera.position.set(42, 10, -10);
       /* this.camera.set */
       this.camera.lookAt(this.scene.position);
 
@@ -44,7 +44,7 @@
 
       this.renderer.setPixelRatio(1.5);
 
-      this.renderer.setClearColor(0xb7d3dc, 0.3);
+      /* this.renderer.setClearColor(0xb7d3dc, 0.3); */
       this.renderer.setSize(this.props.width, this.props.height);
 
       this.div = document.getElementById("wrapper");
@@ -61,8 +61,8 @@
     }
 
     setProps() {
-      var width = document.body.clientWidth;
-      var height = window.innerHeight;
+      var width = 300;
+      var height = 300;
       var aspect = width / height;
 
       this.props = {
@@ -127,7 +127,7 @@
         uniforms: this.uniforms,
         side: THREE.DoubleSide,
         shading: THREE.FlatShading,
-       //  wireframe: true
+        //  wireframe: true
       });
 
       var mesh = new THREE.Mesh(g, m);
@@ -136,4 +136,4 @@
   }
 </script>
 
-<div class="wrapper absolute z-0" id="wrapper" />
+<div class="wrapper z-0 sm:absolute sm:inset-0" id="wrapper" />

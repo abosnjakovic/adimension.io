@@ -13,7 +13,7 @@
 
             let defaultOptions = {
                width: window.innerWidth,
-               height: document.body.clientHeight,
+               height: window.innerHeight,
                cellSize: 45,
                variance: 0.75,
                seed: 'YlGnBu',
@@ -46,7 +46,7 @@
                t.removeChild(t.childNodes[0]);
                document.getElementById('trianglify').appendChild(pattern.toSVG(svgOpts))
             }
-window.dispatchEvent(new Event('resize'));
+            window.dispatchEvent(new Event('resize'));
          })
       }
    })

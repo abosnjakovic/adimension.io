@@ -1,5 +1,6 @@
 <script>
   import {onMount} from "svelte"
+  import Twisted from "../components/twisted/Twisted.svelte"
 </script>
 
 <style>
@@ -45,20 +46,25 @@
   </div>
 
   <figure class="text-xs text-center">
-    <img alt="Person typing on laptop" src="images/undraw_counting_stars_rrnl.svg" />
-    <figcaption class="italic">
-      Illustration <a href="https://undraw.co" target="_blank">Undraw</a>
-    </figcaption>
-
+    <Twisted />
   </figure>
 
 </div>
 
-<p><a href="#" class="italic">works</a></p>
-<div class="flex flex-1 sm:flex-col md:flex-row lg:flex-row">
-  <img class="h-16 pr-4" src="images/wwf-logo.svg" alt="WWF Australia logo">
-  <img class="h-16 pr-4" src="images/webby-logo.svg" alt="Webby Awards logo">
-  <img class="h-16 pr-4" src="images/nsw-logo.png" alt="NSW Government logo">
-  <img class="h-16" src="images/bng.png" alt="Black Nova Group Logo">
+<p><a href="/about" class="italic">works</a></p>
 
+<div class="flex-row sm:flex mb-4">
+  <div class="w-1/4  ">
+    <img class="h-16 m-4 sm:h-10" src="images/wwf-logo.svg" alt="WWF Australia logo">
+  </div>
+  <div class="w-1/4  ">
+    <img class="h-16 m-4 sm:h-10" src="images/webby-logo.svg" alt="Webby Awards logo">
+  </div>
+  <div class="w-1/4  ">
+    <img class="h-16 m-4 sm:h-10" src="images/nsw-logo.png" alt="NSW Government logo">
+  </div>
+  <div class="w-1/4  ">
+    <img class="h-16 m-4 sm:h-10" src="images/bng.png" alt="Black Nova Group Logo">
+  </div>
 </div>
+
