@@ -1,5 +1,5 @@
 <script>
- import {onMount} from "svelte"
+  import {onMount} from "svelte"
 </script>
 
 <style>
@@ -59,6 +59,6 @@
   <img class="h-16 pr-4" src="images/wwf-logo.svg" alt="WWF Australia logo">
   <img class="h-16 pr-4" src="images/webby-logo.svg" alt="Webby Awards logo">
   <img class="h-16 pr-4" src="images/nsw-logo.png" alt="NSW Government logo">
-  <img class="h-16 pr-4" src="images/undp-logo.svg" alt="UNDP logo">
-  <img class="h-10" src="images/aws-logo.svg" alt="AWS Partner Services Logo">
+  <img class="h-16" src="images/bng.png" alt="Black Nova Group Logo">
+
 </div>
