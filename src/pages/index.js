@@ -20,7 +20,7 @@ function IndexPage() {
         <div className="sm:flex-none sm:pb-2 sm:text-center md:flex-1 md:text-left">
           <h1 className="mb-0">Hello, welcome to my dimension .</h1>
           <p>
-            I&aposm Adam Bosnjakovic, a software engineer from the{" "}
+            I&apos;m Adam Bosnjakovic, a software engineer from the{" "}
             <span>♥</span>ly city of Sydney working for{" "}
             <a
               href="https://experience.digital"
