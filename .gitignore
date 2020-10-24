@@ -1,3 +1,6 @@
+# Based on gatsby-starter-default's .gitignore
+# https://github.com/gatsbyjs/gatsby-starter-default/blob/master/.gitignore
+
 # Logs
 logs
 *.log
@@ -51,8 +54,8 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variables file
-.env
+# dotenv environment variable files
+.env*
 
 # gatsby files
 .cache/
@@ -65,5 +68,6 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
