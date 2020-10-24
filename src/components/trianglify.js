@@ -4,8 +4,8 @@ import trianglify from "trianglify/dist/trianglify.bundle.js";
 export default function Trianglify() {
   useEffect(() => {
     let defaultOptions = {
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: window.outerWidth,
+      height: window.outerHeight,
       cellSize: 45,
       variance: 0.75,
       seed: "YlGnBu",
@@ -28,8 +28,8 @@ export default function Trianglify() {
     // window.addEventListener("resize", updateScreenSize);
 
     window.onresize = () => {
-      defaultOptions.height = window.innerHeight;
-      defaultOptions.width = window.innerWidth;
+      defaultOptions.height = window.outerHeight;
+      defaultOptions.width = window.outerWidth;
       const pattern = trianglify(defaultOptions);
       let t = document.getElementById("trianglify");
       t.removeChild(t.childNodes[0]);

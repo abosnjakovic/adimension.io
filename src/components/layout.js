@@ -9,7 +9,7 @@ function Layout({ children }) {
       {/* <Header /> */}
       <Trianglify />
 
-      <main className="flex-1 h-screen w-full max-w-4xl px-4 py-8 m-auto md:px-8 md:py-16 z-10">
+      <main className="flex-1 h-screen w-full max-w-4xl px-4 m-auto md:px-8 z-10">
         {children}
       </main>
     </div>
