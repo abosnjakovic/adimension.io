@@ -1,5 +1,5 @@
 <script>
-  import Header from "../components/Header.svelte";
+  /* import Header from "../components/Header.svelte"; */
   import Trianglify from "../components/trianglify/trianglify.svelte"
   export let segment;
 </script>
@@ -39,7 +39,6 @@
 
 <div class="layout">
   <Trianglify />
-  <Header {segment} />
 
   <main>
     <slot />

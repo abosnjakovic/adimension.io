@@ -136,4 +136,4 @@
   }
 </script>
 
-<div class="wrapper z-0 sm:absolute sm:inset-0" id="wrapper" />
+<div class="wrapper z-0 sm:inset-0" id="wrapper" />
