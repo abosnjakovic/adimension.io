@@ -15,7 +15,7 @@ function IndexPage() {
 
       <div
         className="flex flex-1 sm:flex-col md:flex-row lg:flex-row items-center
-  justify-center m-1 z-10"
+  justify-center m-1 z-10 items-center justify-center h-screen"
       >
         <div className="sm:flex-none sm:pb-2 sm:text-center md:flex-1 md:text-left">
           <h1 className="mb-0">Hello, welcome to my dimension .</h1>
