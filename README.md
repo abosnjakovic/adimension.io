@@ -1,23 +1,38 @@
-# adimension.io
+ # create-svelte
 
-My personal blog. Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog). Syntax theme based on [Sarah Drasner's Night Owl](https://github.com/sdras/night-owl-vscode-theme/) with small tweaks.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-To run locally, `yarn`, then `yarn dev`, then open https://localhost:8000.
+## Creating a project
 
-If you translate content into other languages feel free to PR links. Please ensure translations link to the original content.
+If you're seeing this, you've probably already done this step. Congrats!
 
-# Tooling and connected accounts
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-- https://bitbucket.org/theadameden/adimension.io
-- https://app.netlify.com/sites/confident-turing-2018f7/overview
-- https://rollbar.com/up.and.adam/adimension/
-- https://analytics.google.com
-- https://travis-ci.com/account/repositories
-- https://codeclimate.com
+# create a new project in my-app
+npm init svelte@next my-app
+```
 
-# ToDo
+> Note: the `@next` is temporary
 
-- Menu
-- SVG explode / collapse animations
-- Sitemap and RSS generation?
-- Full PWA support
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+
+```bash
+npm run build
+```
+
+> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
