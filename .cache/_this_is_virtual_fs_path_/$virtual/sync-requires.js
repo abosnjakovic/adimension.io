@@ -4,7 +4,7 @@ const preferDefault = m => (m && m.default) || m
 
 
 exports.components = {
-  "component---cache-dev-404-page-js": preferDefault(require("/Users/adam/Repositories/adimension.io/.cache/dev-404-page.js")),
+  "component---cache-caches-gatsby-plugin-offline-app-shell-js": preferDefault(require("/Users/adam/Repositories/adimension.io/.cache/caches/gatsby-plugin-offline/app-shell.js")),
   "component---src-pages-404-js": preferDefault(require("/Users/adam/Repositories/adimension.io/src/pages/404.js")),
   "component---src-pages-archive-js": preferDefault(require("/Users/adam/Repositories/adimension.io/src/pages/archive.js")),
   "component---src-pages-blog-index-js": preferDefault(require("/Users/adam/Repositories/adimension.io/src/pages/blog/index.js")),
