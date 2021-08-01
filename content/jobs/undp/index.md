@@ -7,7 +7,7 @@ range: 'March 2018 - July 2018'
 url: 'https://www.blacknova.xyz'
 ---
 
-- Workin with the United Nations development program to produce a
+- Working with the United Nations development program to produce a
   website for Coastal Adaption Project in Tuvalu. The site helps give a better
   understanding of the devastating effects of climate change.
 

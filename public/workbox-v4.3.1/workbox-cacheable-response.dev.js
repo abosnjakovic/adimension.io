@@ -1,11 +1,5 @@
 this.workbox = this.workbox || {};
-this.workbox.cacheableResponse = (function (
-  exports,
-  WorkboxError_mjs,
-  assert_mjs,
-  getFriendlyURL_mjs,
-  logger_mjs,
-) {
+this.workbox.cacheableResponse = (function (exports, WorkboxError_mjs, assert_mjs, getFriendlyURL_mjs, logger_mjs) {
   'use strict';
 
   try {
@@ -49,7 +43,7 @@ this.workbox.cacheableResponse = (function (
           throw new WorkboxError_mjs.WorkboxError('statuses-or-headers-required', {
             moduleName: 'workbox-cacheable-response',
             className: 'CacheableResponse',
-            funcName: 'constructor',
+            funcName: 'constructor'
           });
         }
 
@@ -58,7 +52,7 @@ this.workbox.cacheableResponse = (function (
             moduleName: 'workbox-cacheable-response',
             className: 'CacheableResponse',
             funcName: 'constructor',
-            paramName: 'config.statuses',
+            paramName: 'config.statuses'
           });
         }
 
@@ -67,7 +61,7 @@ this.workbox.cacheableResponse = (function (
             moduleName: 'workbox-cacheable-response',
             className: 'CacheableResponse',
             funcName: 'constructor',
-            paramName: 'config.headers',
+            paramName: 'config.headers'
           });
         }
       }
@@ -85,13 +79,14 @@ this.workbox.cacheableResponse = (function (
      * otherwise.
      */
 
+
     isResponseCacheable(response) {
       {
         assert_mjs.assert.isInstance(response, Response, {
           moduleName: 'workbox-cacheable-response',
           className: 'CacheableResponse',
           funcName: 'isResponseCacheable',
-          paramName: 'response',
+          paramName: 'response'
         });
       }
 
@@ -109,13 +104,7 @@ this.workbox.cacheableResponse = (function (
 
       {
         if (!cacheable) {
-          logger_mjs.logger.groupCollapsed(
-            `The request for ` +
-              `'${getFriendlyURL_mjs.getFriendlyURL(
-                response.url,
-              )}' returned a response that does ` +
-              `not meet the criteria for being cached.`,
-          );
+          logger_mjs.logger.groupCollapsed(`The request for ` + `'${getFriendlyURL_mjs.getFriendlyURL(response.url)}' returned a response that does ` + `not meet the criteria for being cached.`);
           logger_mjs.logger.groupCollapsed(`View cacheability criteria here.`);
           logger_mjs.logger.log(`Cacheable statuses: ` + JSON.stringify(this._statuses));
           logger_mjs.logger.log(`Cacheable headers: ` + JSON.stringify(this._headers, null, 2));
@@ -138,6 +127,7 @@ this.workbox.cacheableResponse = (function (
 
       return cacheable;
     }
+
   }
 
   /*
@@ -180,13 +170,17 @@ this.workbox.cacheableResponse = (function (
      * @private
      */
 
-    cacheWillUpdate({ response }) {
+
+    cacheWillUpdate({
+      response
+    }) {
       if (this._cacheableResponse.isResponseCacheable(response)) {
         return response;
       }
 
       return null;
     }
+
   }
 
   /*
@@ -201,5 +195,6 @@ this.workbox.cacheableResponse = (function (
   exports.Plugin = Plugin;
 
   return exports;
-})({}, workbox.core._private, workbox.core._private, workbox.core._private, workbox.core._private);
+
+}({}, workbox.core._private, workbox.core._private, workbox.core._private, workbox.core._private));
 //# sourceMappingURL=workbox-cacheable-response.dev.js.map

@@ -1,6 +1,6 @@
 ---
 date: '3'
-title: 'NSW Geographical Names Board'
+title: 'NSW Gov'
 cover: './gnb.jpg'
 external: 'https://proposals.gnb.nsw.gov.au/login?redirect=%2Ffork'
 tech:

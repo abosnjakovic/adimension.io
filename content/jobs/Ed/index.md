@@ -1,12 +1,16 @@
 ---
-date: '2021-03-15'
-title: 'Chief Technology Officer'
-company: 'Black Nova Group'
+date: '2019-03-15'
+title: 'Lead Software Engineer'
+company: 'Experience Digital'
 location: 'Sydney, Australia'
-range: 'March 2021 - Present'
-url: 'https://www.blacknova.xyz'
+range: 'March 2019 - March 2021'
+url: 'https://www.experience.digital/'
 ---
 
-- Write modern, performant, maintainable code for a diverse array of client and internal projects
-- Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify
-- Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis
+
+- Working closely with senior stakeholders to understand business requirements and help translate these into technical requirements for the development team
+- Planning and documenting technical specifications for features or system design
+- Designing, building and configuring applications to meet business process and application requirements
+- Directing the development team in the design, development, coding, testing and debugging of applications
+- Writing testable, scalable and efficient code and leading code reviews
+- Mentoring junior team members and ensuring they adhere to determined software quality standards

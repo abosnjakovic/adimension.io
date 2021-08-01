@@ -29,7 +29,7 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
       assert_mjs.assert.isInstance(blob, Blob, {
         moduleName: 'workbox-range-requests',
         funcName: 'calculateEffectiveBoundaries',
-        paramName: 'blob',
+        paramName: 'blob'
       });
     }
 
@@ -39,7 +39,7 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
       throw new WorkboxError_mjs.WorkboxError('range-not-satisfiable', {
         size: blobSize,
         end,
-        start,
+        start
       });
     }
 
@@ -60,7 +60,7 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
 
     return {
       start: effectiveStart,
-      end: effectiveEnd,
+      end: effectiveEnd
     };
   }
 
@@ -85,7 +85,7 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
       assert_mjs.assert.isType(rangeHeader, 'string', {
         moduleName: 'workbox-range-requests',
         funcName: 'parseRangeHeader',
-        paramName: 'rangeHeader',
+        paramName: 'rangeHeader'
       });
     }
 
@@ -93,15 +93,16 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
 
     if (!normalizedRangeHeader.startsWith('bytes=')) {
       throw new WorkboxError_mjs.WorkboxError('unit-must-be-bytes', {
-        normalizedRangeHeader,
+        normalizedRangeHeader
       });
     } // Specifying multiple ranges separate by commas is valid syntax, but this
     // library only attempts to handle a single, contiguous sequence of bytes.
     // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range#Syntax
 
+
     if (normalizedRangeHeader.includes(',')) {
       throw new WorkboxError_mjs.WorkboxError('single-range-only', {
-        normalizedRangeHeader,
+        normalizedRangeHeader
       });
     }
 
@@ -109,13 +110,13 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
 
     if (rangeParts === null || !(rangeParts[1] || rangeParts[2])) {
       throw new WorkboxError_mjs.WorkboxError('invalid-range-values', {
-        normalizedRangeHeader,
+        normalizedRangeHeader
       });
     }
 
     return {
       start: rangeParts[1] === '' ? null : Number(rangeParts[1]),
-      end: rangeParts[2] === '' ? null : Number(rangeParts[2]),
+      end: rangeParts[2] === '' ? null : Number(rangeParts[2])
     };
   }
 
@@ -151,12 +152,12 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
         assert_mjs.assert.isInstance(request, Request, {
           moduleName: 'workbox-range-requests',
           funcName: 'createPartialResponse',
-          paramName: 'request',
+          paramName: 'request'
         });
         assert_mjs.assert.isInstance(originalResponse, Response, {
           moduleName: 'workbox-range-requests',
           funcName: 'createPartialResponse',
-          paramName: 'originalResponse',
+          paramName: 'originalResponse'
         });
       }
 
@@ -174,11 +175,7 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
 
       const boundaries = parseRangeHeader(rangeHeader);
       const originalBlob = await originalResponse.blob();
-      const effectiveBoundaries = calculateEffectiveBoundaries(
-        originalBlob,
-        boundaries.start,
-        boundaries.end,
-      );
+      const effectiveBoundaries = calculateEffectiveBoundaries(originalBlob, boundaries.start, boundaries.end);
       const slicedBlob = originalBlob.slice(effectiveBoundaries.start, effectiveBoundaries.end);
       const slicedBlobSize = slicedBlob.size;
       const slicedResponse = new Response(slicedBlob, {
@@ -186,20 +183,14 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
         // See https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/206
         status: 206,
         statusText: 'Partial Content',
-        headers: originalResponse.headers,
+        headers: originalResponse.headers
       });
       slicedResponse.headers.set('Content-Length', slicedBlobSize);
-      slicedResponse.headers.set(
-        'Content-Range',
-        `bytes ${effectiveBoundaries.start}-${effectiveBoundaries.end - 1}/` + originalBlob.size,
-      );
+      slicedResponse.headers.set('Content-Range', `bytes ${effectiveBoundaries.start}-${effectiveBoundaries.end - 1}/` + originalBlob.size);
       return slicedResponse;
     } catch (error) {
       {
-        logger_mjs.logger.warn(
-          `Unable to construct a partial response; returning a ` +
-            `416 Range Not Satisfiable response instead.`,
-        );
+        logger_mjs.logger.warn(`Unable to construct a partial response; returning a ` + `416 Range Not Satisfiable response instead.`);
         logger_mjs.logger.groupCollapsed(`View details here.`);
         logger_mjs.logger.log(error);
         logger_mjs.logger.log(request);
@@ -209,7 +200,7 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
 
       return new Response('', {
         status: 416,
-        statusText: 'Range Not Satisfiable',
+        statusText: 'Range Not Satisfiable'
       });
     }
   }
@@ -243,7 +234,10 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
      *
      * @private
      */
-    async cachedResponseWillBeUsed({ request, cachedResponse }) {
+    async cachedResponseWillBeUsed({
+      request,
+      cachedResponse
+    }) {
       // Only return a sliced response if there's something valid in the cache,
       // and there's a Range: header in the request.
       if (cachedResponse && request.headers.has('range')) {
@@ -251,8 +245,10 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
       } // If there was no Range: header, or if cachedResponse wasn't valid, just
       // pass it through as-is.
 
+
       return cachedResponse;
     }
+
   }
 
   /*
@@ -267,5 +263,6 @@ this.workbox.rangeRequests = (function (exports, WorkboxError_mjs, assert_mjs, l
   exports.Plugin = Plugin;
 
   return exports;
-})({}, workbox.core._private, workbox.core._private, workbox.core._private);
+
+}({}, workbox.core._private, workbox.core._private, workbox.core._private));
 //# sourceMappingURL=workbox-range-requests.dev.js.map
