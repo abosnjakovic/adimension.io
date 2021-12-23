@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import styled from 'styled-components';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
-import { usePrefersReducedMotion } from '@hooks';
+import React, { useEffect, useRef } from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
+import { srConfig } from '@config'
+import sr from '@utils/sr'
+import { usePrefersReducedMotion } from '@hooks'
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -17,7 +17,7 @@ const StyledAboutSection = styled.section`
       display: block;
     }
   }
-`;
+`
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
@@ -44,7 +44,7 @@ const StyledText = styled.div`
       }
     }
   }
-`;
+`
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -111,19 +111,19 @@ const StyledPic = styled.div`
       z-index: -1;
     }
   }
-`;
+`
 
 const About = () => {
-  const revealContainer = useRef(null);
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const revealContainer = useRef(null)
+  const prefersReducedMotion = usePrefersReducedMotion()
 
   useEffect(() => {
     if (prefersReducedMotion) {
-      return;
+      return
     }
 
-    sr.reveal(revealContainer.current, srConfig());
-  }, []);
+    sr.reveal(revealContainer.current, srConfig())
+  }, [])
 
   const skills = [
     'JavaScript (ES6+)',
@@ -134,41 +134,44 @@ const About = () => {
     'Golang',
     'Rust WASM',
     'Three.js',
-  ];
+  ]
 
   return (
-    <StyledAboutSection id="about" ref={revealContainer}>
-      <h2 className="numbered-heading">About Me</h2>
+    <StyledAboutSection id='about' ref={revealContainer}>
+      <h2 className='numbered-heading'>About Me</h2>
 
-      <div className="inner">
+      <div className='inner'>
         <StyledText>
           <div>
-            <p>I got into programming like many because I wanted to *mod games, through this I</p>
-            <p>Lorum Ipsum</p>
+            <p>
+              I have always like problem solving, it has taken me through a career in IT,
+              engineering and now a CTO. It's given me a love for climbing and adventure and an
+              ability to see the world from another perspective.
+            </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
           </div>
 
-          <ul className="skills-list">
+          <ul className='skills-list'>
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
           </ul>
         </StyledText>
 
         <StyledPic>
-          <div className="wrapper">
+          <div className='wrapper'>
             <StaticImage
-              className="img"
-              src="../../images/me.png"
+              className='img'
+              src='../../images/me.png'
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
+              alt='Headshot'
             />
           </div>
         </StyledPic>
       </div>
     </StyledAboutSection>
-  );
-};
+  )
+}
 
-export default About;
+export default About
