@@ -8,7 +8,7 @@ const siteMetadata = {
   siteUrl: 'https://adimension.io',
   siteRepo: 'https://github.com/abosnjakovic/adimension.io',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.webp',
+  image: '/static/images/me.jpeg',
   socialBanner: '/static/images/twitter-card.png',
   email: 'adam@adimensin.io',
   github: 'https://github.com/abosnjakovic',

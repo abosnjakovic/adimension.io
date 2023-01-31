@@ -5,7 +5,7 @@ import RecentPosts from '@/components/RecentPosts'
 import SectionContainer from '@/components/SectionContainer'
 import { PageSEO } from '@/components/SEO'
 import TopTracks from '@/components/Spotify/TopTrack'
-import Works from '@/components/Work/Works'
+/* import Works from '@/components/Work/Works' */
 import siteMetadata from '@/data/siteMetadata'
 import HomeLayout from '@/layouts/HomeLayout'
 import { allCoreContent, sortedBlogPost } from '@/lib/utils/contentlayer'
@@ -19,6 +19,9 @@ export const getStaticProps = async () => {
   return { props: { posts } }
 }
 
+/* TODO: write some content for this space */
+/* <Works /> */
+
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
@@ -28,7 +31,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       </SectionContainer>
       <Hero />
       <Intro />
-      <Works />
       <HomeLayout>
         <RecentPosts posts={posts} />
         <TopTracks />
