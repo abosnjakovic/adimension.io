@@ -51,7 +51,7 @@ export default function Intro() {
             className="introText inline-block"
             style={{ opacity: opacityForBlock(progress, 2) }}
           >
-            Ask why, be curios.
+            Ask why, be curious.
           </span>
         </div>
       </div>
