@@ -1,5 +1,4 @@
 import PageTitle from '@/components/PageTitle'
-import PostComments from '@/components/PostComments'
 import PostNavigation from '@/components/PostNavigation'
 import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
@@ -54,10 +53,9 @@ export default function PostLayout({ content, authorDetails, children, next, pre
           style={{ gridTemplateRows: 'auto 1fr' }}
         >
           <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-4 xl:row-span-2 xl:pb-0">
-            <div className="prose max-w-none pt-8 pb-8 dark:prose-dark">
+            <div className="prose max-w-none pt-8 pb-8 text-lg dark:prose-dark">
               {children}
               <PostNavigation prev={prev} next={next} />
-              <PostComments />
             </div>
           </div>
         </div>
